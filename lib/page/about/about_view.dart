@@ -18,7 +18,7 @@ class _AboutViewState extends State<AboutView> {
       child: Column(
         children: <Widget>[
           Text(
-            'Tốt nghiệp',
+            '',
             style: textTheme.headline6,
           ),
         ],
