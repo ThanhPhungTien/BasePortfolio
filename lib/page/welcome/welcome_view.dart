@@ -29,6 +29,7 @@ class _WelcomeViewState extends State<WelcomeView> {
             AnimatedTextKit(
               animatedTexts: <AnimatedText>[
                 TypewriterAnimatedText(
+                  // 'I\'m Thành, Phùng Tiến',
                   'I\'m Thành, Phùng Tiến',
                   textStyle: textTheme.headline2!.copyWith(
                     fontWeight: FontWeight.bold,
@@ -44,7 +45,8 @@ class _WelcomeViewState extends State<WelcomeView> {
             ),
             Container(height: 8),
             Text(
-              'Mobile, Web and Backend Developer',
+              // 'Mobile, Web and Backend Developer',
+              '',
               style: textTheme.headline5!.copyWith(
                 color: AppColor.primaryColor,
               ),
