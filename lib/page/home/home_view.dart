@@ -94,7 +94,7 @@ class _HomeViewState extends State<HomeView> {
                     Container(width: 16),
                     MaterialButton(
                       child: Text(
-                        'Skill',
+                        'Skills',
                         style: textTheme.headline6!.copyWith(
                           color: page == 2
                               ? AppColor.white

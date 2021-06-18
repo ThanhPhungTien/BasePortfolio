@@ -22,28 +22,56 @@ class _SkillViewState extends State<SkillView> {
     SkillItem('images/mongodb.png', 'Since 2021'),
     SkillItem('images/nodejs.png', 'Since 2021'),
   ];
+  final List<SkillItem> softSkills = <SkillItem>[
+    SkillItem('images/android_logo.png', 'Since 2016'),
+  ];
 
   @override
   Widget build(BuildContext context) {
     return Container(
       color: AppColor.primaryColor,
       padding: const EdgeInsets.all(64),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
+      child: ListView(
         children: <Widget>[
           Text(
-            'My Skill',
+            'Soft Skills',
             style: textTheme.headline6!.copyWith(color: AppColor.white),
           ),
           Container(height: 16),
-          Expanded(
-            child: Wrap(
-              spacing: 16,
-              runSpacing: 16,
-              children: data
-                  .map((SkillItem item) => _itemSkill(context, item))
-                  .toList(),
-            ),
+          Wrap(
+            spacing: 16,
+            runSpacing: 16,
+            children: <Widget>[
+              Container(
+                color: AppColor.white,
+                padding: const EdgeInsets.all(8),
+                child: Text('Scrum Master', style: textTheme.subtitle1),
+              ),
+              Container(
+                color: AppColor.white,
+                padding: const EdgeInsets.all(8),
+                child:
+                    Text('Flutter team\'s leader', style: textTheme.subtitle1),
+              ),
+              Container(
+                color: AppColor.white,
+                padding: const EdgeInsets.all(8),
+                child: Text('Technical manager', style: textTheme.subtitle1),
+              ),
+            ],
+          ),
+          Container(height: 16),
+          Text(
+            'Programing Skills',
+            style: textTheme.headline6!.copyWith(color: AppColor.white),
+          ),
+          Container(height: 16),
+          Wrap(
+            spacing: 16,
+            runSpacing: 16,
+            children: data
+                .map((SkillItem item) => _itemSkill(context, item))
+                .toList(),
           )
         ],
       ),
