@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:portfilio/base/app_color.dart';
 import 'package:portfilio/base/theme.dart';
@@ -11,90 +12,134 @@ class AboutView extends StatefulWidget {
 
 class _AboutViewState extends State<AboutView> {
   final List<String> hobbies = <String>[
-    'Reading book',
-    'Gaming',
-    'Football',
-    'Coding',
+    'images/coding.png',
+    'images/reading.png',
+    'images/gaming.png',
+    'images/football.png',
   ];
 
   final List<Work> works = <Work>[
     Work('DOBODY GLOBAL JSC', 2016, 2017, 'Android Developer'),
-    Work('ANVUI JSC', 2017, 0, 'Flutter Developer and Technical manager'),
+    Work('ANVUI JSC', 2017, 0, 'Flutter Developer'),
+    Work('ANVUI JSC', 2020, 0, 'Technical Manager'),
+    Work('ANVUI JSC', 2021, 0, 'Backend Developer'),
   ];
 
   @override
   Widget build(BuildContext context) {
+    final double width = MediaQuery.of(context).size.width;
+    final EdgeInsets padding = EdgeInsets.only(
+      top: 64,
+      left: width / 5,
+      right: width / 5,
+    );
     return Container(
       color: AppColor.secondaryLightColor,
-      padding: const EdgeInsets.all(64),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
+      padding: padding,
+      child: ListView(
         children: <Widget>[
-          Text('Hobbies',
-              style: textTheme.headline5!.copyWith(
-                fontWeight: FontWeight.bold,
-              )),
-          ListView.builder(
-            physics: const NeverScrollableScrollPhysics(),
-            shrinkWrap: true,
-            itemCount: hobbies.length,
-            itemBuilder: (BuildContext context, int index) {
-              return Padding(
-                padding: const EdgeInsets.only(left: 16, bottom: 8),
-                child: Text(hobbies[index], style: textTheme.bodyText1),
-              );
-            },
+          Text(
+            'Hobbies',
+            style: textTheme.headline5!.copyWith(fontWeight: FontWeight.bold),
           ),
-          Container(height: 16),
-          Text('Education',
-              style: textTheme.headline5!.copyWith(
-                fontWeight: FontWeight.bold,
-              )),
-          ListTile(
-            subtitle: Text(
-              'Software engineering (2013 -2018)',
-              style: textTheme.bodyText1,
-            ),
-            title: Text(
-              'Posts and Telecommunications Institute of Technology',
-              style: textTheme.bodyText1,
-            ),
+          Container(height: 8),
+          Wrap(
+            children: hobbies
+                .map(
+                  (String hobby) => Container(
+                    width: 100,
+                    height: 100,
+                    decoration: BoxDecoration(
+                      color: AppColor.secondaryColor,
+                      border: Border.all(
+                        width: 0.2,
+                        color: AppColor.primaryLightColor,
+                      ),
+                    ),
+                    padding: const EdgeInsets.all(16),
+                    child: Image.asset(hobby),
+                  ),
+                )
+                .toList(),
           ),
           Container(height: 16),
           Text(
-            'Career',
+            'Education',
             style: textTheme.headline5!.copyWith(
               fontWeight: FontWeight.bold,
             ),
           ),
-          ListView.builder(
-            physics: const NeverScrollableScrollPhysics(),
-            shrinkWrap: true,
-            itemCount: works.length,
-            itemBuilder: (BuildContext context, int index) {
-              return ListTile(
-                title: Text(
-                  works[index].companyName,
-                  style: textTheme.bodyText1!.copyWith(
-                    fontWeight: FontWeight.bold,
-                  ),
-                ),
-                subtitle: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  mainAxisSize: MainAxisSize.min,
-                  children: <Widget>[
-                    Text(
-                      '${works[index].startYear} - ${works[index].endYear == 0 ? 'nay' : works[index].endYear}',
-                      style: textTheme.subtitle1,
-                    ),
-                    Text(
-                      works[index].title,
-                      style: textTheme.subtitle1,
-                    ),
-                  ],
-                ),
-              );
-            },
+          Container(
+            margin: const EdgeInsets.only(top: 8),
+            decoration: BoxDecoration(
+              color: AppColor.secondaryColor,
+              border: Border.all(
+                width: 0.2,
+                color: AppColor.primaryLightColor,
+              ),
+            ),
+            child: ListTile(
+              subtitle: Text(
+                'Software Engineering (2013 -2018)',
+                style: textTheme.bodyText1,
+              ),
+              title: Text(
+                'Posts and Telecommunications Institute of Technology',
+                style: textTheme.headline6,
+              ),
+            ),
+          ),
+          Container(height: 16),
+          Text(
+            'Work Experiences',
+            style: textTheme.headline5!.copyWith(
+              fontWeight: FontWeight.bold,
+            ),
+          ),
+          Container(height: 8),
+          Wrap(
+            children:
+                works.map((Work work) => _itemWork(context, work)).toList(),
+          ),
+        ],
+      ),
+    );
+  }
+
+  Widget _itemWork(BuildContext context, Work work) {
+    return Container(
+      padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 32),
+      width: (1920 - 1920 / 5 * 2) / 4,
+      decoration: BoxDecoration(
+        color: AppColor.secondaryColor,
+        border: Border.all(
+          color: AppColor.primaryLightColor,
+          width: 0.2,
+        ),
+      ),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        mainAxisSize: MainAxisSize.min,
+        children: <Widget>[
+          Text(
+            '${work.startYear} - ${work.endYear == 0 ? 'now' : work.endYear}',
+            style: textTheme.subtitle2!.copyWith(
+              color: AppColor.primaryLightColor,
+            ),
+          ),
+          Container(height: 8),
+          Text(
+            work.title,
+            style: textTheme.headline6!.copyWith(
+              fontWeight: FontWeight.bold,
+            ),
+          ),
+          Container(height: 8),
+          Text(
+            work.companyName,
+            style: textTheme.subtitle2!.copyWith(
+              color: AppColor.primaryLightColor,
+            ),
           ),
         ],
       ),

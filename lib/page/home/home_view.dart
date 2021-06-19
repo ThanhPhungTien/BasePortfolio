@@ -44,6 +44,7 @@ class _HomeViewState extends State<HomeView> {
           PageView(
             scrollDirection: Axis.vertical,
             controller: controller,
+            physics: const NeverScrollableScrollPhysics(),
             children: const <Widget>[
               WelcomeView(),
               AboutView(),
@@ -60,7 +61,7 @@ class _HomeViewState extends State<HomeView> {
               return Positioned(
                 top: 16,
                 right: 32,
-                child: Row(
+                child: Wrap(
                   children: <Widget>[
                     MaterialButton(
                       child: Text(

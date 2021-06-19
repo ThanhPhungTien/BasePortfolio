@@ -28,9 +28,15 @@ class _SkillViewState extends State<SkillView> {
 
   @override
   Widget build(BuildContext context) {
+    final double width = MediaQuery.of(context).size.width;
+    final EdgeInsets padding = EdgeInsets.only(
+      top: 64,
+      left: width / 5,
+      right: width / 5,
+    );
     return Container(
-      color: AppColor.primaryColor,
-      padding: const EdgeInsets.all(64),
+      color: AppColor.secondaryDarkColor,
+      padding: padding,
       child: ListView(
         children: <Widget>[
           Text(
@@ -87,8 +93,8 @@ class _SkillViewState extends State<SkillView> {
       decoration: const BoxDecoration(
         color: AppColor.white,
       ),
-      width: height / 4,
-      height: height / 4,
+      width: height / 6,
+      height: height / 6,
       padding: const EdgeInsets.all(16),
       child: Column(
         mainAxisSize: MainAxisSize.min,

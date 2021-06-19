@@ -15,40 +15,62 @@ class _WelcomeViewState extends State<WelcomeView> {
   @override
   Widget build(BuildContext context) {
     final double height = MediaQuery.of(context).size.height;
-    final double width = MediaQuery.of(context).size.height;
+    final double width = MediaQuery.of(context).size.width;
+    final EdgeInsets padding = EdgeInsets.only(
+      top: 64,
+      left: width / 5,
+      right: width / 5,
+    );
     return Container(
+      padding: padding,
       height: height,
       width: width,
       color: AppColor.secondaryColor,
-      padding: const EdgeInsets.all(64),
       child: Center(
         child: Column(
           mainAxisSize: MainAxisSize.min,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: <Widget>[
-            AnimatedTextKit(
-              animatedTexts: <AnimatedText>[
-                TypewriterAnimatedText(
-                  // 'I\'m Thành, Phùng Tiến',
-                  'I\'m Thành, Phùng Tiến',
-                  textStyle: textTheme.headline2!.copyWith(
-                    fontWeight: FontWeight.bold,
-                    color: AppColor.primaryColor,
-                  ),
-                  speed: const Duration(milliseconds: 100),
+            Container(
+              height: 250,
+              width: 250,
+              margin: const EdgeInsets.only(bottom: 8),
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(250),
+                image: const DecorationImage(
+                  image: AssetImage('images/avatar.jpg'),
+                  fit: BoxFit.cover,
                 ),
-              ],
-              totalRepeatCount: 1,
-              pause: const Duration(milliseconds: 1000),
-              displayFullTextOnTap: true,
-              stopPauseOnTap: true,
+              ),
+            ),
+            Text(
+              'I\'m Thành, Phùng Tiến',
+              style: textTheme.headline2!.copyWith(
+                fontWeight: FontWeight.bold,
+                color: AppColor.primaryColor,
+              ),
             ),
             Container(height: 8),
-            Text(
-              // 'Mobile, Web and Backend Developer',
-              '',
-              style: textTheme.headline5!.copyWith(
-                color: AppColor.primaryColor,
+            Container(
+              height: 100,
+              child: Row(
+                mainAxisSize: MainAxisSize.min,
+                children: <Widget>[
+                  DefaultTextStyle(
+                    style: textTheme.headline5!.copyWith(
+                      color: AppColor.primaryColor,
+                    ),
+                    child: AnimatedTextKit(
+                      animatedTexts: <AnimatedText>[
+                        RotateAnimatedText('MOBILE DEVELOPER'),
+                        RotateAnimatedText('WEB DEVELOPER'),
+                        RotateAnimatedText('BACKEND DEVELOPER'),
+                        RotateAnimatedText('TECHNICAL MANAGER'),
+                      ],
+                      repeatForever: true,
+                    ),
+                  ),
+                ],
               ),
             ),
             Container(height: 8),
