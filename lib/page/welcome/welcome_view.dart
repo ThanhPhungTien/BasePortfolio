@@ -31,18 +31,21 @@ class _WelcomeViewState extends State<WelcomeView> {
           mainAxisSize: MainAxisSize.min,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: <Widget>[
-            Container(
+            AnimatedContainer(
               height: 250,
               width: 250,
               margin: const EdgeInsets.only(bottom: 8),
               decoration: BoxDecoration(
+                color: AppColor.secondaryLightColor,
                 borderRadius: BorderRadius.circular(250),
                 image: const DecorationImage(
                   image: AssetImage('images/avatar.jpg'),
                   fit: BoxFit.cover,
                 ),
               ),
+              duration: const Duration(milliseconds: 300),
             ),
+            Container(height: 16),
             Text(
               'I\'m Thành, Phùng Tiến',
               style: textTheme.headline2!.copyWith(
