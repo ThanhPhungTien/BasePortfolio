@@ -1,30 +1,42 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <!--
-    If you are serving your web app in a path other than the root, change the
-    href value below to reflect the base path you are serving from.
+    <!--
+      If you are serving your web app in a path other than the root, change the
+      href value below to reflect the base path you are serving from.
 
-    The path provided below has to start and end with a slash "/" in order for
-    it to work correctly.
+      The path provided below has to start and end with a slash "/" in order for
+      it to work correctly.
 
-    For more details:
-    * https://developer.mozilla.org/en-US/docs/Web/HTML/Element/base
-  -->
-  <base href="https://thanhphungtien.github.io/">
+      For more details:
+      * https://developer.mozilla.org/en-US/docs/Web/HTML/Element/base
+    -->
+    <base href="https://thanhphungtien.github.io/">
 
-  <meta charset="UTF-8">
-  <meta content="IE=Edge" http-equiv="X-UA-Compatible">
-  <meta name="description" content="Thành Portfilio">
+    <meta charset="UTF-8">
+    <meta content="IE=Edge" http-equiv="X-UA-Compatible">
+    <meta name="description" content="Thành Portfilio">
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
 
-  <!-- iOS meta tags & icons -->
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-status-bar-style" content="black">
-  <meta name="apple-mobile-web-app-title" content="Thành">
-  <link rel="apple-touch-icon" href="icons/Icon-192.png">
+    <!-- iOS meta tags & icons -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="Thành">
+    <link rel="apple-touch-icon" href="icons/Icon-192.png">
 
-  <title>portfilio</title>
-  <link rel="manifest" href="manifest.json">
+    <title>Phùng Tiến Thành</title>
+    <meta property="og:image"
+          content="https://www.facebook.com/photo/?fbid=4584747954890083&set=a.276565372375051">
+    <meta property="og:title"
+          content="Phùng Tiến Thành">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://thanhphungtien.github.io/">
+    <meta property="og:description"
+          content="Software Engineer">
+    <meta name="description"
+          content="Software Engineer"/>
+    <link rel="manifest" href="manifest.json">
     <style>
         * {
   border: 0;
@@ -223,21 +235,31 @@ body {
     stroke-dashoffset: -440;
   }
 }
+
+
     </style>
 </head>
 <body>
-  <!-- This script installs service_worker.js to provide PWA functionality to
-       application. For more information, see:
-       https://developers.google.com/web/fundamentals/primers/service-workers -->
+<!-- This script installs service_worker.js to provide PWA functionality to
+     application. For more information, see:
+     https://developers.google.com/web/fundamentals/primers/service-workers -->
 
-  <svg class="pl" width="240" height="240" viewBox="0 0 240 240">
-      <circle class="pl__ring pl__ring--a" cx="120" cy="120" r="105" fill="none" stroke="#000" stroke-width="20" stroke-dasharray="0 660" stroke-dashoffset="-330" stroke-linecap="round" />
-      <circle class="pl__ring pl__ring--b" cx="120" cy="120" r="35" fill="none" stroke="#000" stroke-width="20" stroke-dasharray="0 220" stroke-dashoffset="-110" stroke-linecap="round" />
-      <circle class="pl__ring pl__ring--c" cx="85" cy="120" r="70" fill="none" stroke="#000" stroke-width="20" stroke-dasharray="0 440" stroke-linecap="round" />
-      <circle class="pl__ring pl__ring--d" cx="155" cy="120" r="70" fill="none" stroke="#000" stroke-width="20" stroke-dasharray="0 440" stroke-linecap="round" />
-  </svg>
+<svg class="pl" width="240" height="240" viewBox="0 0 240 240">
+    <circle class="pl__ring pl__ring--a" cx="120" cy="120" r="105" fill="none"
+            stroke="#000" stroke-width="20" stroke-dasharray="0 660"
+            stroke-dashoffset="-330" stroke-linecap="round"/>
+    <circle class="pl__ring pl__ring--b" cx="120" cy="120" r="35" fill="none"
+            stroke="#000" stroke-width="20" stroke-dasharray="0 220"
+            stroke-dashoffset="-110" stroke-linecap="round"/>
+    <circle class="pl__ring pl__ring--c" cx="85" cy="120" r="70" fill="none"
+            stroke="#000" stroke-width="20" stroke-dasharray="0 440"
+            stroke-linecap="round"/>
+    <circle class="pl__ring pl__ring--d" cx="155" cy="120" r="70" fill="none"
+            stroke="#000" stroke-width="20" stroke-dasharray="0 440"
+            stroke-linecap="round"/>
+</svg>
 
-  <script>
+<script>
     var serviceWorkerVersion = null;
     var scriptLoaded = false;
     function loadMainDartJs() {
@@ -300,6 +322,8 @@ body {
       // Service workers not supported. Just drop the <script> tag.
       loadMainDartJs();
     }
-  </script>
+
+
+</script>
 </body>
 </html>
