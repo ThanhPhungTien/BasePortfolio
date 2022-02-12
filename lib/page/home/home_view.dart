@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:portfilio/base/app_color.dart';
-import 'package:portfilio/base/theme.dart';
+import 'package:portfilio/base/style.dart';
 import 'package:portfilio/page/about/about_view.dart';
 import 'package:portfilio/page/skill/skill_view.dart';
 import 'package:portfilio/page/welcome/welcome_view.dart';

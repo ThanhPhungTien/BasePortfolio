@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:portfilio/base/route_names.dart';
-import 'package:portfilio/base/theme.dart';
-import 'package:portfilio/page/home/home_view.dart';
+import 'package:portfilio/base/style.dart';
+import 'package:portfilio/page/home/home_new_view.dart';
 import 'package:portfilio/page/not_found/not_found_view.dart';
 
-void main() {
-  runApp(MyApp());
-}
+void main() => runApp(const MyApp());
 
 class MyApp extends StatelessWidget {
+  const MyApp({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -25,12 +25,12 @@ class MyApp extends StatelessWidget {
     switch (settings.name) {
       case RouteNames.home:
         return MaterialPageRoute<dynamic>(
-          builder: (BuildContext context) => HomeView(),
+          builder: (BuildContext context) => const HomeNewView(),
           settings: const RouteSettings(name: RouteNames.home),
         );
       default:
         return MaterialPageRoute<dynamic>(
-          builder: (BuildContext context) => NotFoundView(),
+          builder: (BuildContext context) => const NotFoundView(),
           settings: const RouteSettings(name: RouteNames.notFound),
         );
     }

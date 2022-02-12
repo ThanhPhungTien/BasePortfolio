@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:portfilio/base/app_color.dart';
-import 'package:portfilio/base/theme.dart';
+import 'package:portfilio/base/style.dart';
 
 class SkillView extends StatefulWidget {
   const SkillView({Key? key}) : super(key: key);
@@ -38,6 +38,7 @@ class _SkillViewState extends State<SkillView> {
       color: AppColor.secondaryDarkColor,
       padding: padding,
       child: ListView(
+        shrinkWrap: true,
         children: <Widget>[
           Text(
             'Soft Skills',

@@ -10,7 +10,7 @@ class NotFoundView extends StatefulWidget {
 class _NotFoundViewState extends State<NotFoundView> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return const Scaffold(
       body: Center(
         child: Text('404 NOT FOUND'),
       ),

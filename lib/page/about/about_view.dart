@@ -1,7 +1,6 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:portfilio/base/app_color.dart';
-import 'package:portfilio/base/theme.dart';
+import 'package:portfilio/base/style.dart';
 
 class AboutView extends StatefulWidget {
   const AboutView({Key? key}) : super(key: key);

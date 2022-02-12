@@ -1,7 +1,7 @@
 import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:flutter/material.dart';
 import 'package:portfilio/base/app_color.dart';
-import 'package:portfilio/base/theme.dart';
+import 'package:portfilio/base/style.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class WelcomeView extends StatefulWidget {
@@ -54,7 +54,7 @@ class _WelcomeViewState extends State<WelcomeView> {
               ),
             ),
             Container(height: 8),
-            Container(
+            SizedBox(
               height: 100,
               child: Row(
                 mainAxisSize: MainAxisSize.min,
