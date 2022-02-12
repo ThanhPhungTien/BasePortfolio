@@ -13,6 +13,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       theme: themeData,
+      title: 'Phùng Tiến Thành',
       debugShowCheckedModeBanner: false,
       initialRoute: RouteNames.home,
       onGenerateRoute: (RouteSettings settings) => routeSettings(settings),
