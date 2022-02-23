@@ -6,7 +6,7 @@ class SkillsNewView extends StatelessWidget {
 
   final Map<String, double> technicalSkills = <String, double>{
     'Android': 0.7,
-    'Switch': 0.5,
+    'Swift': 0.5,
     'Flutter': 0.9,
     'MySQL': 0.5,
     'FireStore': 0.5,
