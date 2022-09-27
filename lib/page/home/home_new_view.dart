@@ -69,37 +69,40 @@ class HeaderView extends StatelessWidget {
     final TextTheme textTheme = Theme.of(context).textTheme;
     return Row(
       children: <Widget>[
-        Text(
-          'Thành',
-          style: textTheme.headline6!.copyWith(
-            color: Palette.primaryColor,
+        Expanded(
+          child: Text(
+            'Thành',
+            style: textTheme.headline6!.copyWith(
+              color: Palette.primaryColor,
+            ),
           ),
         ),
-        const Spacer(),
-        TextButton(
-          onPressed: () => clickMenu(0),
-          child: const Text('HOME'),
+
+        ButtonBar(
+          children: [
+            TextButton(
+              onPressed: () => clickMenu(0),
+              child: const Text('HOME'),
+            ),
+            TextButton(
+              onPressed: () => clickMenu(1),
+              child: const Text('ABOUT'),
+            ),
+            TextButton(
+              onPressed: () => clickMenu(2),
+              child: const Text('SKILLS'),
+            ),
+            TextButton(
+              onPressed: () => clickMenu(3),
+              child: const Text('RESUME'),
+            ),
+            TextButton(
+              onPressed: () => clickMenu(4),
+              child: const Text('CONTACT'),
+            ),
+          ],
         ),
-        const SizedBox(width: 8),
-        TextButton(
-          onPressed: () => clickMenu(1),
-          child: const Text('ABOUT'),
-        ),
-        const SizedBox(width: 8),
-        TextButton(
-          onPressed: () => clickMenu(2),
-          child: const Text('SKILLS'),
-        ),
-        const SizedBox(width: 8),
-        TextButton(
-          onPressed: () => clickMenu(3),
-          child: const Text('RESUME'),
-        ),
-        const SizedBox(width: 8),
-        TextButton(
-          onPressed: () => clickMenu(4),
-          child: const Text('CONTACT'),
-        ),
+
       ],
     );
   }
