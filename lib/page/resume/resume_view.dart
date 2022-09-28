@@ -7,10 +7,10 @@ class ResumeView extends StatefulWidget {
   const ResumeView({Key? key}) : super(key: key);
 
   @override
-  _ResumeViewState createState() => _ResumeViewState();
+  ResumeViewState createState() => ResumeViewState();
 }
 
-class _ResumeViewState extends State<ResumeView> {
+class ResumeViewState extends State<ResumeView> {
   List<Widget> education = [
     const Text("Education"),
     const SizedBox(height: 16),
@@ -41,6 +41,7 @@ class _ResumeViewState extends State<ResumeView> {
     return BasePageView(
       icon: 'images/resume.svg',
       title: 'RESUME',
+      backgroundColor: Palette.backgroundLightColor,
       child: Row(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: <Widget>[
@@ -64,7 +65,6 @@ class _ResumeViewState extends State<ResumeView> {
           ),
         ],
       ),
-      backgroundColor: Palette.backgroundLightColor,
     );
   }
 }
@@ -92,7 +92,9 @@ class ItemResume extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Row(children: [Text(title, style: textTheme.subtitle2)]),
+            Row(
+              children: [Expanded(child: Text(title, style: textTheme.subtitle2))],
+            ),
             const SizedBox(height: 4),
             Text(
               time,

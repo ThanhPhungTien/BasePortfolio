@@ -6,10 +6,10 @@ class SkillView extends StatefulWidget {
   const SkillView({Key? key}) : super(key: key);
 
   @override
-  _SkillViewState createState() => _SkillViewState();
+  SkillViewState createState() => SkillViewState();
 }
 
-class _SkillViewState extends State<SkillView> {
+class SkillViewState extends State<SkillView> {
   final List<SkillItem> data = <SkillItem>[
     SkillItem('images/android_logo.png', 'Since 2016'),
     SkillItem('images/mysql.png', 'Since 2016'),

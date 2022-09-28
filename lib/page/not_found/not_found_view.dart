@@ -4,10 +4,10 @@ class NotFoundView extends StatefulWidget {
   const NotFoundView({Key? key}) : super(key: key);
 
   @override
-  _NotFoundViewState createState() => _NotFoundViewState();
+  NotFoundViewState createState() => NotFoundViewState();
 }
 
-class _NotFoundViewState extends State<NotFoundView> {
+class NotFoundViewState extends State<NotFoundView> {
   @override
   Widget build(BuildContext context) {
     return const Scaffold(

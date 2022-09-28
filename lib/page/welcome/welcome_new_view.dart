@@ -9,10 +9,10 @@ class WelcomeNewView extends StatefulWidget {
   const WelcomeNewView({Key? key}) : super(key: key);
 
   @override
-  _WelcomeNewViewState createState() => _WelcomeNewViewState();
+  WelcomeNewViewState createState() => WelcomeNewViewState();
 }
 
-class _WelcomeNewViewState extends State<WelcomeNewView> {
+class WelcomeNewViewState extends State<WelcomeNewView> {
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -68,8 +68,8 @@ class AvatarView extends StatelessWidget {
                     mainAxisSize: MainAxisSize.min,
                     children: <Widget>[
                       InkWell(
-                        onTap: () =>
-                            launch('https://www.facebook.com/phungitienthanh/'),
+                        onTap: () => launchUrl(Uri.parse(
+                            'https://www.facebook.com/phungitienthanh/')),
                         child: SvgPicture.asset(
                           'images/facebook.svg',
                           color: Palette.white,
@@ -80,7 +80,8 @@ class AvatarView extends StatelessWidget {
                       Container(width: 16),
                       InkWell(
                         onTap: () {
-                          launch('https://www.linkedin.com/in/phungtienthanh');
+                          launchUrl(Uri.parse(
+                              'https://www.linkedin.com/in/phungtienthanh'));
                         },
                         child: SvgPicture.asset(
                           'images/linkedin.svg',
@@ -91,8 +92,8 @@ class AvatarView extends StatelessWidget {
                       ),
                       Container(width: 16),
                       InkWell(
-                        onTap: () =>
-                            launch('https://github.com/ThanhPhungTien'),
+                        onTap: () => launchUrl(
+                            Uri.parse('https://github.com/ThanhPhungTien')),
                         child: SvgPicture.asset(
                           'images/github.svg',
                           color: Palette.white,
@@ -101,8 +102,8 @@ class AvatarView extends StatelessWidget {
                       ),
                       Container(width: 16),
                       InkWell(
-                        onTap: () =>
-                            launch('mailto:phungtienthanh135@gmail.com'),
+                        onTap: () => launchUrl(
+                            Uri.parse('mailto:phungtienthanh135@gmail.com')),
                         child: SvgPicture.asset(
                           'images/gmail.svg',
                           color: Palette.white,

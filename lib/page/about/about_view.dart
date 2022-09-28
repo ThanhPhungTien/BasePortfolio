@@ -6,10 +6,10 @@ class AboutView extends StatefulWidget {
   const AboutView({Key? key}) : super(key: key);
 
   @override
-  _AboutViewState createState() => _AboutViewState();
+  AboutViewState createState() => AboutViewState();
 }
 
-class _AboutViewState extends State<AboutView> {
+class AboutViewState extends State<AboutView> {
   final List<String> hobbies = <String>[
     'images/coding.png',
     'images/reading.png',

@@ -8,10 +8,10 @@ class WelcomeView extends StatefulWidget {
   const WelcomeView({Key? key}) : super(key: key);
 
   @override
-  _WelcomeViewState createState() => _WelcomeViewState();
+  WelcomeViewState createState() => WelcomeViewState();
 }
 
-class _WelcomeViewState extends State<WelcomeView> {
+class WelcomeViewState extends State<WelcomeView> {
   @override
   Widget build(BuildContext context) {
     final double height = MediaQuery.of(context).size.height;
@@ -82,7 +82,7 @@ class _WelcomeViewState extends State<WelcomeView> {
               children: <Widget>[
                 InkWell(
                   onTap: () {
-                    launch('https://www.facebook.com/phungitienthanh/');
+                    launchUrl(Uri.parse('https://www.facebook.com/phungitienthanh/'));
                   },
                   child: Image.asset(
                     'images/facebook.png',
@@ -94,7 +94,7 @@ class _WelcomeViewState extends State<WelcomeView> {
                 Container(width: 16),
                 InkWell(
                   onTap: () {
-                    launch('https://www.linkedin.com/in/phungtienthanh');
+                    launchUrl(Uri.parse('https://www.linkedin.com/in/phungtienthanh'));
                   },
                   child: Image.asset(
                     'images/linked_in.png',
@@ -106,7 +106,7 @@ class _WelcomeViewState extends State<WelcomeView> {
                 Container(width: 16),
                 InkWell(
                   onTap: () {
-                    launch('https://github.com/ThanhPhungTien');
+                    launchUrl(Uri.parse('https://github.com/ThanhPhungTien'));
                   },
                   child: Image.asset(
                     'images/github.png',
@@ -117,7 +117,7 @@ class _WelcomeViewState extends State<WelcomeView> {
                 Container(width: 16),
                 InkWell(
                   onTap: () {
-                    launch('mailto:phungtienthanh135@gmail.com');
+                    launchUrl(Uri.parse('mailto:phungtienthanh135@gmail.com'));
                   },
                   child: Image.asset(
                     'images/gmail_logo.png',

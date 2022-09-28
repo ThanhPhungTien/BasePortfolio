@@ -6,10 +6,10 @@ class AboutNewView extends StatefulWidget {
   const AboutNewView({Key? key}) : super(key: key);
 
   @override
-  _AboutNewViewState createState() => _AboutNewViewState();
+  AboutNewViewState createState() => AboutNewViewState();
 }
 
-class _AboutNewViewState extends State<AboutNewView> {
+class AboutNewViewState extends State<AboutNewView> {
   Map<String, String> data = <String, String>{
     'Gaming': 'images/game.png',
     'Soccer': 'images/soccer.png',

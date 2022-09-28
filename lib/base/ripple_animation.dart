@@ -14,10 +14,10 @@ class RipplesAnimation extends StatefulWidget {
   final Widget child;
 
   @override
-  _RipplesAnimationState createState() => _RipplesAnimationState();
+  RipplesAnimationState createState() => RipplesAnimationState();
 }
 
-class _RipplesAnimationState extends State<RipplesAnimation>
+class RipplesAnimationState extends State<RipplesAnimation>
     with TickerProviderStateMixin {
   late AnimationController _controller;
   @override
@@ -88,11 +88,11 @@ class CirclePainter extends CustomPainter {
   final Animation<double> _animation;
   void circle(Canvas canvas, Rect rect, double value) {
     final double opacity = (1.0 - (value / 4.0)).clamp(0.0, 1.0);
-    final Color _color = color.withOpacity(opacity);
+    final Color mColor = color.withOpacity(opacity);
     final double size = rect.width / 2;
     final double area = size * size;
     final double radius = math.sqrt(area * value / 4);
-    final Paint paint = Paint()..color = _color;
+    final Paint paint = Paint()..color = mColor;
     canvas.drawCircle(rect.center, radius, paint);
   }
 

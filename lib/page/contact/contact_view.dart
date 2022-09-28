@@ -5,10 +5,10 @@ class ContactView extends StatefulWidget {
   const ContactView({Key? key}) : super(key: key);
 
   @override
-  _ContactViewState createState() => _ContactViewState();
+  ContactViewState createState() => ContactViewState();
 }
 
-class _ContactViewState extends State<ContactView> {
+class ContactViewState extends State<ContactView> {
   @override
   Widget build(BuildContext context) {
     return BasePageView(

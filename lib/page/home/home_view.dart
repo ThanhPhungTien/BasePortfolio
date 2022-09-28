@@ -12,10 +12,10 @@ class HomeView extends StatefulWidget {
   const HomeView({Key? key}) : super(key: key);
 
   @override
-  _HomeViewState createState() => _HomeViewState();
+  HomeViewState createState() => HomeViewState();
 }
 
-class _HomeViewState extends State<HomeView> {
+class HomeViewState extends State<HomeView> {
   late PageController controller;
   late HomeCubit bloc;
 
@@ -64,6 +64,10 @@ class _HomeViewState extends State<HomeView> {
                 child: Wrap(
                   children: <Widget>[
                     MaterialButton(
+                      textColor: AppColor.primaryColor,
+                      onPressed: () {
+                        jumpToPage(0);
+                      },
                       child: Text(
                         'Welcome',
                         style: textTheme.headline6!.copyWith(
@@ -72,13 +76,13 @@ class _HomeViewState extends State<HomeView> {
                               : AppColor.primaryColorDark,
                         ),
                       ),
-                      textColor: AppColor.primaryColor,
-                      onPressed: () {
-                        jumpToPage(0);
-                      },
                     ),
                     Container(width: 16),
                     MaterialButton(
+                      textColor: AppColor.primaryColor,
+                      onPressed: () {
+                        jumpToPage(1);
+                      },
                       child: Text(
                         'About Me',
                         style: textTheme.headline6!.copyWith(
@@ -87,13 +91,13 @@ class _HomeViewState extends State<HomeView> {
                               : AppColor.primaryColorDark,
                         ),
                       ),
-                      textColor: AppColor.primaryColor,
-                      onPressed: () {
-                        jumpToPage(1);
-                      },
                     ),
                     Container(width: 16),
                     MaterialButton(
+                      textColor: AppColor.primaryColor,
+                      onPressed: () {
+                        jumpToPage(2);
+                      },
                       child: Text(
                         'Skills',
                         style: textTheme.headline6!.copyWith(
@@ -102,10 +106,6 @@ class _HomeViewState extends State<HomeView> {
                               : AppColor.primaryColorDark,
                         ),
                       ),
-                      textColor: AppColor.primaryColor,
-                      onPressed: () {
-                        jumpToPage(2);
-                      },
                     ),
                   ],
                 ),

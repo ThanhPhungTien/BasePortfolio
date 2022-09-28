@@ -11,10 +11,10 @@ class HomeNewView extends StatefulWidget {
   const HomeNewView({Key? key}) : super(key: key);
 
   @override
-  _HomeNewViewState createState() => _HomeNewViewState();
+  HomeNewViewState createState() => HomeNewViewState();
 }
 
-class _HomeNewViewState extends State<HomeNewView> {
+class HomeNewViewState extends State<HomeNewView> {
   final ItemScrollController _controller = ItemScrollController();
 
   final List<Widget> _widgets = <Widget>[
