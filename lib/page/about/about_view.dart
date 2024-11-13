@@ -3,7 +3,7 @@ import 'package:portfilio/base/app_color.dart';
 import 'package:portfilio/base/style.dart';
 
 class AboutView extends StatefulWidget {
-  const AboutView({Key? key}) : super(key: key);
+  const AboutView({super.key});
 
   @override
   AboutViewState createState() => AboutViewState();
@@ -39,7 +39,7 @@ class AboutViewState extends State<AboutView> {
         children: <Widget>[
           Text(
             'Hobbies',
-            style: textTheme.headline5!.copyWith(fontWeight: FontWeight.bold),
+            style: textTheme.headlineSmall!.copyWith(fontWeight: FontWeight.bold),
           ),
           Container(height: 8),
           Wrap(
@@ -64,7 +64,7 @@ class AboutViewState extends State<AboutView> {
           Container(height: 16),
           Text(
             'Education',
-            style: textTheme.headline5!.copyWith(
+            style: textTheme.headlineSmall!.copyWith(
               fontWeight: FontWeight.bold,
             ),
           ),
@@ -80,18 +80,18 @@ class AboutViewState extends State<AboutView> {
             child: ListTile(
               subtitle: Text(
                 'Software Engineering (2013 -2018)',
-                style: textTheme.bodyText1,
+                style: textTheme.bodyLarge,
               ),
               title: Text(
                 'Posts and Telecommunications Institute of Technology',
-                style: textTheme.headline6,
+                style: textTheme.titleLarge,
               ),
             ),
           ),
           Container(height: 16),
           Text(
             'Work Experiences',
-            style: textTheme.headline5!.copyWith(
+            style: textTheme.headlineSmall!.copyWith(
               fontWeight: FontWeight.bold,
             ),
           ),
@@ -122,21 +122,21 @@ class AboutViewState extends State<AboutView> {
         children: <Widget>[
           Text(
             '${work.startYear} - ${work.endYear == 0 ? 'now' : work.endYear}',
-            style: textTheme.subtitle2!.copyWith(
+            style: textTheme.titleSmall!.copyWith(
               color: AppColor.primaryLightColor,
             ),
           ),
           Container(height: 8),
           Text(
             work.title,
-            style: textTheme.headline6!.copyWith(
+            style: textTheme.titleLarge!.copyWith(
               fontWeight: FontWeight.bold,
             ),
           ),
           Container(height: 8),
           Text(
             work.companyName,
-            style: textTheme.subtitle2!.copyWith(
+            style: textTheme.titleSmall!.copyWith(
               color: AppColor.primaryLightColor,
             ),
           ),

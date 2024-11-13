@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:portfilio/page/base_page/base_page_view.dart';
 
 class ContactView extends StatefulWidget {
-  const ContactView({Key? key}) : super(key: key);
+  const ContactView({super.key});
 
   @override
   ContactViewState createState() => ContactViewState();

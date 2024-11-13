@@ -4,11 +4,11 @@ import 'package:flutter/material.dart';
 
 class RipplesAnimation extends StatefulWidget {
   const RipplesAnimation({
-    Key? key,
+    super.key,
     this.size = 80.0,
     this.color = Colors.red,
     required this.child,
-  }) : super(key: key);
+  });
   final double size;
   final Color color;
   final Widget child;

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class ResponsiveWidget extends StatefulWidget {
-  const ResponsiveWidget({Key? key}) : super(key: key);
+  const ResponsiveWidget({super.key});
 
   @override
   ResponsiveWidgetState createState() => ResponsiveWidgetState();

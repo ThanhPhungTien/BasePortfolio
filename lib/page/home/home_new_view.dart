@@ -8,7 +8,7 @@ import 'package:portfilio/page/welcome/welcome_new_view.dart';
 import 'package:scrollable_positioned_list/scrollable_positioned_list.dart';
 
 class HomeNewView extends StatefulWidget {
-  const HomeNewView({Key? key}) : super(key: key);
+  const HomeNewView({super.key});
 
   @override
   HomeNewViewState createState() => HomeNewViewState();
@@ -60,7 +60,7 @@ class HomeNewViewState extends State<HomeNewView> {
 }
 
 class HeaderView extends StatelessWidget {
-  const HeaderView({Key? key, required this.clickMenu}) : super(key: key);
+  const HeaderView({super.key, required this.clickMenu});
 
   final ValueChanged<int> clickMenu;
 
@@ -72,13 +72,13 @@ class HeaderView extends StatelessWidget {
         Expanded(
           child: Text(
             'Thành',
-            style: textTheme.headline6!.copyWith(
+            style: textTheme.titleLarge!.copyWith(
               color: Palette.primaryColor,
             ),
           ),
         ),
 
-        ButtonBar(
+        OverflowBar(
           children: [
             TextButton(
               onPressed: () => clickMenu(0),
@@ -111,7 +111,7 @@ class HeaderView extends StatelessWidget {
 }
 
 class FooterView extends StatelessWidget {
-  const FooterView({Key? key}) : super(key: key);
+  const FooterView({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -123,7 +123,7 @@ class FooterView extends StatelessWidget {
         children: <Widget>[
           Text(
             '© Copyright 2022 Phùng Tiến Thành. All rights reserved.',
-            style: textTheme.bodyText1,
+            style: textTheme.bodyLarge,
           ),
         ],
       ),

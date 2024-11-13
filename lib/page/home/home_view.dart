@@ -9,7 +9,7 @@ import 'package:portfilio/page/welcome/welcome_view.dart';
 import 'home_cubit.dart';
 
 class HomeView extends StatefulWidget {
-  const HomeView({Key? key}) : super(key: key);
+  const HomeView({super.key});
 
   @override
   HomeViewState createState() => HomeViewState();
@@ -70,7 +70,7 @@ class HomeViewState extends State<HomeView> {
                       },
                       child: Text(
                         'Welcome',
-                        style: textTheme.headline6!.copyWith(
+                        style: textTheme.titleLarge!.copyWith(
                           color: page == 0
                               ? AppColor.white
                               : AppColor.primaryColorDark,
@@ -85,7 +85,7 @@ class HomeViewState extends State<HomeView> {
                       },
                       child: Text(
                         'About Me',
-                        style: textTheme.headline6!.copyWith(
+                        style: textTheme.titleLarge!.copyWith(
                           color: page == 1
                               ? AppColor.white
                               : AppColor.primaryColorDark,
@@ -100,7 +100,7 @@ class HomeViewState extends State<HomeView> {
                       },
                       child: Text(
                         'Skills',
-                        style: textTheme.headline6!.copyWith(
+                        style: textTheme.titleLarge!.copyWith(
                           color: page == 2
                               ? AppColor.white
                               : AppColor.primaryColorDark,

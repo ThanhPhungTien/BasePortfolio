@@ -3,7 +3,7 @@ import 'package:portfilio/base/palette.dart';
 import 'package:portfilio/page/base_page/base_page_view.dart';
 
 class AboutNewView extends StatefulWidget {
-  const AboutNewView({Key? key}) : super(key: key);
+  const AboutNewView({super.key});
 
   @override
   AboutNewViewState createState() => AboutNewViewState();
@@ -29,10 +29,10 @@ class AboutNewViewState extends State<AboutNewView> {
         children: <Widget>[
           Text(
             'Hello, I\'m Thành. ',
-            style: textTheme.bodyText1,
+            style: textTheme.bodyLarge,
           ),
           const SizedBox(height: 32),
-          Text('My Interests', style: textTheme.subtitle1),
+          Text('My Interests', style: textTheme.titleMedium),
           const SizedBox(height: 16),
           Wrap(
             direction: Axis.horizontal,
@@ -55,10 +55,10 @@ class AboutNewViewState extends State<AboutNewView> {
 
 class ItemInteresting extends StatelessWidget {
   const ItemInteresting({
-    Key? key,
+    super.key,
     required this.image,
     required this.title,
-  }) : super(key: key);
+  });
   final String image;
   final String title;
 
@@ -78,7 +78,7 @@ class ItemInteresting extends StatelessWidget {
         children: [
           Image.asset(image, height: 40, width: 40),
           const SizedBox(height: 8),
-          Text(title, style: textTheme.bodyText2),
+          Text(title, style: textTheme.bodyMedium),
         ],
       ),
     );

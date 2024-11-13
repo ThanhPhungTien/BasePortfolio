@@ -5,7 +5,7 @@ import 'package:portfilio/base/style.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class WelcomeView extends StatefulWidget {
-  const WelcomeView({Key? key}) : super(key: key);
+  const WelcomeView({super.key});
 
   @override
   WelcomeViewState createState() => WelcomeViewState();
@@ -48,7 +48,7 @@ class WelcomeViewState extends State<WelcomeView> {
             Container(height: 16),
             Text(
               'I\'m Thành, Phùng Tiến',
-              style: textTheme.headline2!.copyWith(
+              style: textTheme.displayMedium!.copyWith(
                 fontWeight: FontWeight.bold,
                 color: AppColor.primaryColor,
               ),
@@ -60,7 +60,7 @@ class WelcomeViewState extends State<WelcomeView> {
                 mainAxisSize: MainAxisSize.min,
                 children: <Widget>[
                   DefaultTextStyle(
-                    style: textTheme.headline5!.copyWith(
+                    style: textTheme.headlineSmall!.copyWith(
                       color: AppColor.primaryColor,
                     ),
                     child: AnimatedTextKit(

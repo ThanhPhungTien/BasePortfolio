@@ -6,7 +6,7 @@ import '../../base/palette.dart';
 import '../../base/ripple_animation.dart';
 
 class WelcomeNewView extends StatefulWidget {
-  const WelcomeNewView({Key? key}) : super(key: key);
+  const WelcomeNewView({super.key});
 
   @override
   WelcomeNewViewState createState() => WelcomeNewViewState();
@@ -32,7 +32,7 @@ class WelcomeNewViewState extends State<WelcomeNewView> {
 }
 
 class AvatarView extends StatelessWidget {
-  const AvatarView({Key? key}) : super(key: key);
+  const AvatarView({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -61,7 +61,7 @@ class AvatarView extends StatelessWidget {
                   ),
                   Text(
                     'Software Engineer',
-                    style: textTheme.caption,
+                    style: textTheme.bodySmall,
                   ),
                   const SizedBox(height: 32),
                   Row(
@@ -69,7 +69,8 @@ class AvatarView extends StatelessWidget {
                     children: <Widget>[
                       InkWell(
                         onTap: () => launchUrl(Uri.parse(
-                            'https://www.facebook.com/phungitienthanh/')),
+                          'https://www.facebook.com/phungitienthanh/',
+                        )),
                         child: SvgPicture.asset(
                           'images/facebook.svg',
                           color: Palette.white,

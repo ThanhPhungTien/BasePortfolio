@@ -3,7 +3,7 @@ import 'package:portfilio/base/app_color.dart';
 import 'package:portfilio/base/style.dart';
 
 class SkillView extends StatefulWidget {
-  const SkillView({Key? key}) : super(key: key);
+  const SkillView({super.key});
 
   @override
   SkillViewState createState() => SkillViewState();
@@ -42,7 +42,7 @@ class SkillViewState extends State<SkillView> {
         children: <Widget>[
           Text(
             'Soft Skills',
-            style: textTheme.headline6!.copyWith(color: AppColor.white),
+            style: textTheme.titleLarge!.copyWith(color: AppColor.white),
           ),
           Container(height: 16),
           Wrap(
@@ -52,25 +52,25 @@ class SkillViewState extends State<SkillView> {
               Container(
                 color: AppColor.white,
                 padding: const EdgeInsets.all(8),
-                child: Text('Scrum Master', style: textTheme.subtitle1),
+                child: Text('Scrum Master', style: textTheme.titleMedium),
               ),
               Container(
                 color: AppColor.white,
                 padding: const EdgeInsets.all(8),
                 child:
-                    Text('Flutter team\'s leader', style: textTheme.subtitle1),
+                    Text('Flutter team\'s leader', style: textTheme.titleMedium),
               ),
               Container(
                 color: AppColor.white,
                 padding: const EdgeInsets.all(8),
-                child: Text('Technical manager', style: textTheme.subtitle1),
+                child: Text('Technical manager', style: textTheme.titleMedium),
               ),
             ],
           ),
           Container(height: 16),
           Text(
             'Programing Skills',
-            style: textTheme.headline6!.copyWith(color: AppColor.white),
+            style: textTheme.titleLarge!.copyWith(color: AppColor.white),
           ),
           Container(height: 16),
           Wrap(
@@ -108,7 +108,7 @@ class SkillViewState extends State<SkillView> {
             ),
           ),
           Container(height: 16),
-          Text(item.since, style: textTheme.bodyText1),
+          Text(item.since, style: textTheme.bodyLarge),
         ],
       ),
     );

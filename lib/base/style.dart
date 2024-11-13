@@ -6,7 +6,6 @@ import 'package:portfilio/base/palette.dart';
 final ThemeData themeData = ThemeData(
   primaryColor: Palette.primaryColor,
   primaryColorLight: Palette.primaryLightColor,
-  backgroundColor: Palette.backgroundColor,
   iconTheme: iconThemeData,
   appBarTheme: appBarTheme,
   buttonTheme: buttonThemeData,
@@ -26,19 +25,19 @@ SliderThemeData sliderThemeData = SliderThemeData(
 );
 TextButtonThemeData textButtonThemeData = TextButtonThemeData(
   style: ButtonStyle(
-    textStyle: MaterialStateProperty.all(
-      textTheme.button?.copyWith(
+    textStyle: WidgetStateProperty.all(
+      textTheme.labelLarge?.copyWith(
         color: Palette.white,
       ),
     ),
-    foregroundColor: MaterialStateProperty.all(Palette.textColor),
+    foregroundColor: WidgetStateProperty.all(Palette.textColor),
   ),
 );
 
 final DialogTheme dialogTheme = DialogTheme(
   backgroundColor: Palette.backgroundColor,
-  titleTextStyle: textTheme.headline6,
-  contentTextStyle: textTheme.bodyText1,
+  titleTextStyle: textTheme.titleLarge,
+  contentTextStyle: textTheme.bodyLarge,
   shape: RoundedRectangleBorder(
     borderRadius: BorderRadius.circular(8),
   ),
@@ -56,8 +55,8 @@ final AppBarTheme appBarTheme = AppBarTheme(
   centerTitle: true,
   actionsIconTheme: iconThemeData,
   systemOverlayStyle: SystemUiOverlayStyle.dark,
-  toolbarTextStyle: textTheme.bodyText2,
-  titleTextStyle: textTheme.headline6,
+  toolbarTextStyle: textTheme.bodyMedium,
+  titleTextStyle: textTheme.titleLarge,
 );
 
 const IconThemeData iconThemeData = IconThemeData(
@@ -65,77 +64,77 @@ const IconThemeData iconThemeData = IconThemeData(
 );
 
 final TextTheme textTheme = TextTheme(
-  headline1: GoogleFonts.montserrat(
+  displayLarge: GoogleFonts.montserrat(
     fontSize: 97,
     fontWeight: FontWeight.w300,
     letterSpacing: -1.5,
     color: Palette.textColor,
   ),
-  headline2: GoogleFonts.montserrat(
+  displayMedium: GoogleFonts.montserrat(
     fontSize: 61,
     fontWeight: FontWeight.w300,
     letterSpacing: -0.5,
     color: Palette.textColor,
   ),
-  headline3: GoogleFonts.montserrat(
+  displaySmall: GoogleFonts.montserrat(
     fontSize: 48,
     fontWeight: FontWeight.w400,
     color: Palette.textColor,
   ),
-  headline4: GoogleFonts.montserrat(
+  headlineMedium: GoogleFonts.montserrat(
     fontSize: 34,
     fontWeight: FontWeight.w400,
     letterSpacing: 0.25,
     color: Palette.textColor,
   ),
-  headline5: GoogleFonts.montserrat(
+  headlineSmall: GoogleFonts.montserrat(
     fontSize: 24,
     fontWeight: FontWeight.w400,
     color: Palette.textColor,
   ),
-  headline6: GoogleFonts.montserrat(
+  titleLarge: GoogleFonts.montserrat(
     fontSize: 20,
     fontWeight: FontWeight.w500,
     letterSpacing: 0.15,
     color: Palette.textColor,
   ),
-  subtitle1: GoogleFonts.montserrat(
+  titleMedium: GoogleFonts.montserrat(
     fontSize: 16,
     fontWeight: FontWeight.w400,
     letterSpacing: 0.15,
     color: Palette.textColor,
   ),
-  subtitle2: GoogleFonts.montserrat(
+  titleSmall: GoogleFonts.montserrat(
     fontSize: 14,
     fontWeight: FontWeight.w500,
     letterSpacing: 0.1,
     color: Palette.textColor,
   ),
-  bodyText1: GoogleFonts.openSans(
+  bodyLarge: GoogleFonts.openSans(
     fontSize: 16,
     fontWeight: FontWeight.w400,
     letterSpacing: 0.5,
     color: Palette.textColor,
   ),
-  bodyText2: GoogleFonts.openSans(
+  bodyMedium: GoogleFonts.openSans(
     fontSize: 14,
     fontWeight: FontWeight.w400,
     letterSpacing: 0.25,
     color: Palette.textColor,
   ),
-  button: GoogleFonts.openSans(
+  labelLarge: GoogleFonts.openSans(
     fontSize: 14,
     fontWeight: FontWeight.w500,
     letterSpacing: 1.25,
     color: Palette.textColor,
   ),
-  caption: GoogleFonts.openSans(
+  bodySmall: GoogleFonts.openSans(
     fontSize: 12,
     fontWeight: FontWeight.w400,
     letterSpacing: 0.4,
     color: Palette.textColor,
   ),
-  overline: GoogleFonts.openSans(
+  labelSmall: GoogleFonts.openSans(
     fontSize: 10,
     fontWeight: FontWeight.w400,
     letterSpacing: 1.5,

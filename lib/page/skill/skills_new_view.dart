@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:portfilio/page/base_page/base_page_view.dart';
 
 class SkillsNewView extends StatelessWidget {
-  SkillsNewView({Key? key}) : super(key: key);
+  SkillsNewView({super.key});
 
   final Map<String, double> technicalSkills = <String, double>{
     'Android': 0.7,
@@ -53,10 +53,10 @@ class SkillsNewView extends StatelessWidget {
 
 class SkillsWidget extends StatelessWidget {
   const SkillsWidget({
-    Key? key,
+    super.key,
     required this.title,
     required this.data,
-  }) : super(key: key);
+  });
 
   final String title;
   final Map<String, double> data;
@@ -71,7 +71,7 @@ class SkillsWidget extends StatelessWidget {
       children: <Widget>[
         Text(
           title,
-          style: textTheme.bodyText1,
+          style: textTheme.bodyLarge,
         ),
         const SizedBox(height: 16),
         ListView(
@@ -88,10 +88,10 @@ class SkillsWidget extends StatelessWidget {
 
 class ItemSkill extends StatelessWidget {
   const ItemSkill({
-    Key? key,
+    super.key,
     required this.title,
     required this.percent,
-  }) : super(key: key);
+  });
 
   final String title;
   final double percent;
@@ -104,7 +104,7 @@ class ItemSkill extends StatelessWidget {
       mainAxisSize: MainAxisSize.min,
       crossAxisAlignment: CrossAxisAlignment.start,
       children: <Widget>[
-        Text(title, style: textTheme.subtitle2),
+        Text(title, style: textTheme.titleSmall),
         Slider(value: percent, onChanged: (value) {}),
       ],
     );

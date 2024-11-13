@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class NotFoundView extends StatefulWidget {
-  const NotFoundView({Key? key}) : super(key: key);
+  const NotFoundView({super.key});
 
   @override
   NotFoundViewState createState() => NotFoundViewState();

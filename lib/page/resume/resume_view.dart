@@ -4,7 +4,7 @@ import 'package:portfilio/page/base_page/base_page_view.dart';
 import '../../base/palette.dart';
 
 class ResumeView extends StatefulWidget {
-  const ResumeView({Key? key}) : super(key: key);
+  const ResumeView({super.key});
 
   @override
   ResumeViewState createState() => ResumeViewState();
@@ -71,11 +71,11 @@ class ResumeViewState extends State<ResumeView> {
 
 class ItemResume extends StatelessWidget {
   const ItemResume({
-    Key? key,
+    super.key,
     required this.time,
     required this.title,
     required this.content,
-  }) : super(key: key);
+  });
 
   final String time;
   final String title;
@@ -93,17 +93,17 @@ class ItemResume extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Row(
-              children: [Expanded(child: Text(title, style: textTheme.subtitle2))],
+              children: [Expanded(child: Text(title, style: textTheme.titleSmall))],
             ),
             const SizedBox(height: 4),
             Text(
               time,
-              style: textTheme.caption!.copyWith(
+              style: textTheme.bodySmall!.copyWith(
                 color: Palette.primaryColor,
               ),
             ),
             const SizedBox(height: 4),
-            Text(content, style: textTheme.bodyText1),
+            Text(content, style: textTheme.bodyLarge),
           ],
         ),
       ),

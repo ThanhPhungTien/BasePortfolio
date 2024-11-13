@@ -4,12 +4,12 @@ import 'package:portfilio/base/palette.dart';
 
 class BasePageView extends StatelessWidget {
   const BasePageView({
-    Key? key,
+    super.key,
     required this.icon,
     required this.title,
     required this.child,
     this.backgroundColor = Palette.backgroundColor,
-  }) : super(key: key);
+  });
 
   final String icon;
   final String title;
@@ -31,7 +31,7 @@ class BasePageView extends StatelessWidget {
           children: <Widget>[
             SvgPicture.asset(icon, height: 48, width: 48),
             const SizedBox(height: 16),
-            Text(title, style: textTheme.headline5),
+            Text(title, style: textTheme.headlineSmall),
             const SizedBox(height: 16),
             child,
           ],
