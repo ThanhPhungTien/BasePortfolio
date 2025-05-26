@@ -21,7 +21,7 @@ SliderThemeData sliderThemeData = SliderThemeData(
   thumbColor: Palette.primaryColor,
   overlayColor: Palette.primaryColor,
   activeTrackColor: Palette.primaryColor,
-  inactiveTrackColor: Palette.primaryLightColor.withOpacity(0.1),
+  inactiveTrackColor: Palette.primaryLightColor.withValues(alpha: 0.1),
 );
 TextButtonThemeData textButtonThemeData = TextButtonThemeData(
   style: ButtonStyle(
@@ -34,7 +34,7 @@ TextButtonThemeData textButtonThemeData = TextButtonThemeData(
   ),
 );
 
-final DialogTheme dialogTheme = DialogTheme(
+final dialogTheme = DialogThemeData(
   backgroundColor: Palette.backgroundColor,
   titleTextStyle: textTheme.titleLarge,
   contentTextStyle: textTheme.bodyLarge,

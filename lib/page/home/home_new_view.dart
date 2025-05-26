@@ -39,17 +39,9 @@ class HomeNewViewState extends State<HomeNewView> {
       ),
       body: ScrollablePositionedList.builder(
         itemScrollController: _controller,
-        itemBuilder: (BuildContext context, int index) {
-          return _widgets[index];
-        },
+        itemBuilder: (BuildContext context, int index) => _widgets[index],
         itemCount: _widgets.length,
       ),
-      // floatingActionButton:  FloatingActionButton(
-      //
-      //   onPressed: () {},
-      //   backgroundColor: Palette.primaryColor,
-      //   child: const Icon(Icons.arrow_upward_rounded),
-      // ),
     );
   }
 
@@ -71,13 +63,12 @@ class HeaderView extends StatelessWidget {
       children: <Widget>[
         Expanded(
           child: Text(
-            'Thành',
+            '',
             style: textTheme.titleLarge!.copyWith(
               color: Palette.primaryColor,
             ),
           ),
         ),
-
         OverflowBar(
           children: [
             TextButton(
@@ -102,7 +93,6 @@ class HeaderView extends StatelessWidget {
             ),
           ],
         ),
-
       ],
     );
   }

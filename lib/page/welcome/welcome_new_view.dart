@@ -20,13 +20,11 @@ class WelcomeNewViewState extends State<WelcomeNewView> {
       decoration: const BoxDecoration(
         image: DecorationImage(
           image: AssetImage('images/background.jpeg'),
-          fit: BoxFit.fitWidth,
+          fit: BoxFit.cover,
           opacity: 0.1,
         ),
       ),
-      child: const Center(
-        child: AvatarView(),
-      ),
+      child: const Center(child: AvatarView()),
     );
   }
 }
@@ -73,20 +71,21 @@ class AvatarView extends StatelessWidget {
                         )),
                         child: SvgPicture.asset(
                           'images/facebook.svg',
-                          color: Palette.white,
+                          colorFilter:
+                              ColorFilter.mode(Palette.white, BlendMode.srcIn),
                           height: 30,
                           width: 30,
                         ),
                       ),
                       Container(width: 16),
                       InkWell(
-                        onTap: () {
-                          launchUrl(Uri.parse(
-                              'https://www.linkedin.com/in/phungtienthanh'));
-                        },
+                        onTap: () => launchUrl(Uri.parse(
+                          'https://www.linkedin.com/in/phungtienthanh',
+                        )),
                         child: SvgPicture.asset(
                           'images/linkedin.svg',
-                          color: Palette.white,
+                          colorFilter:
+                              ColorFilter.mode(Palette.white, BlendMode.srcIn),
                           height: 30,
                           width: 30,
                         ),
@@ -97,7 +96,8 @@ class AvatarView extends StatelessWidget {
                             Uri.parse('https://github.com/ThanhPhungTien')),
                         child: SvgPicture.asset(
                           'images/github.svg',
-                          color: Palette.white,
+                          colorFilter:
+                              ColorFilter.mode(Palette.white, BlendMode.srcIn),
                           height: 30,
                         ),
                       ),
@@ -107,7 +107,8 @@ class AvatarView extends StatelessWidget {
                             Uri.parse('mailto:phungtienthanh135@gmail.com')),
                         child: SvgPicture.asset(
                           'images/gmail.svg',
-                          color: Palette.white,
+                          colorFilter:
+                              ColorFilter.mode(Palette.white, BlendMode.srcIn),
                           height: 30,
                           width: 30,
                         ),
